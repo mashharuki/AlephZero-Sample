@@ -1,6 +1,7 @@
 import { task } from "hardhat/config";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { getContractAddress } from "../../helpers/contractJsonHelper";
+import { alephZeroTestnet } from "../../helpers/constants";
 
 /**
  * 【Task】	get deployed contract address
@@ -12,7 +13,9 @@ task("getContractAddress", "getContractAddress of connected chain")
 			"################################### [START] ###################################"
 		);
 
-		const publicClient = await hre.viem.getPublicClient();
+		const publicClient = await hre.viem.getPublicClient({
+			chain: alephZeroTestnet
+		});
 		const chainId = (await publicClient.getChainId()).toString();
 		// get contract name
 		const contractName = `${taskArgs.contract}Module#${taskArgs.contract}`;

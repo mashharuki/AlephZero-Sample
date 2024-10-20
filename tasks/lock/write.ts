@@ -2,6 +2,7 @@ import { task } from "hardhat/config";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { getContractAddress } from "../../helpers/contractJsonHelper";
 import { formatEther } from "viem";
+import { alephZeroTestnet } from "../../helpers/constants";
 
 /**
  * 【Task】	call write method of sample contract
@@ -15,8 +16,12 @@ task(
 	);
 
 	// get wallet client
-	const [owner] = await hre.viem.getWalletClients();
-	const publicClient = await hre.viem.getPublicClient();
+	const [owner] = await hre.viem.getWalletClients({
+		chain: alephZeroTestnet
+	});
+	const publicClient = await hre.viem.getPublicClient({
+		chain: alephZeroTestnet
+	});
 	// get chain ID
 	const chainId = (await publicClient.getChainId()).toString();
 	// get contract name
@@ -33,7 +38,10 @@ task(
 		"Lock",
 		contractAddress as `0x${string}`,
 		{
-			client: { wallet: owner },
+			client: { 
+				public: publicClient,
+				wallet: owner 
+			},
 		}
 	);
 
