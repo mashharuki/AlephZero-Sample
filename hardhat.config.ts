@@ -6,7 +6,7 @@ import * as dotenv from "dotenv";
 
 dotenv.config();
 
-const { PRIVATE_KEY, GINCO_API_KEY } = process.env;
+const { PRIVATE_KEY} = process.env;
 
 // タスクファイルを読み込むための設定
 const SKIP_LOAD = process.env.SKIP_LOAD === "true";
