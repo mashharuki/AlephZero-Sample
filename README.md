@@ -1,6 +1,6 @@
-# Ginco-One-Platform-Sample
+# AlephZero-Sample
 
-This is a repo for Ginco-One-Platform-Sample.
+This is a repo for AlephZero-Sample
 
 [![Build and Test SmartContract on GitHub Actions](https://github.com/mashharuki/Ginco-One-Platform-Sample/actions/workflows/ci.yml/badge.svg)](https://github.com/mashharuki/Ginco-One-Platform-Sample/actions/workflows/ci.yml)
 
@@ -8,20 +8,13 @@ This is a repo for Ginco-One-Platform-Sample.
 
 - ### **setUp**
 
-  1.  You need to create Ginco API Key.
-
-      [Ginco One Platform Site](https://console.cloud.ginco.com/nodes/api)
-
-      ![](./docs/api.png)
-
-  2.  You need to create `.env` file & fillout these values
+  1. You need to create `.env` file & fillout these values
 
       ```txt
       PRIVATE_KEY=""
-      GINCO_API_KEY=""
       ```
 
-  3.  install
+  2.  install
 
       ```bash
       yarn
@@ -71,6 +64,3 @@ This is a repo for Ginco-One-Platform-Sample.
     yarn callWriteMethod --network holesky
     ```
 
-### 参考文献
-
-1. [Ginco One Platform Site](https://console.cloud.ginco.com/nodes/api)
