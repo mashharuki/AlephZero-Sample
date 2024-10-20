@@ -37,30 +37,33 @@ This is a repo for AlephZero-Sample
   - **deploy contract**
 
     ```bash
-    yarn deploy:Lock --network holesky
+    yarn deploy:Lock --network alephZeroTestnet
     ```
 
   - **get chain info**
 
     ```bash
-    yarn getChainInfo --network holesky
+    yarn getChainInfo --network alephZeroTestnet
     ```
 
   - **get balance**
 
     ```bash
-    yarn getBalance --network holesky
+    yarn getBalance --network alephZeroTestnet
     ```
 
   - **callReadMethod**
 
     ```bash
-    yarn callReadMethod --network holesky
+    yarn callReadMethod --network alephZeroTestnet
     ```
 
   - **calWriteMethod**
 
     ```bash
-    yarn callWriteMethod --network holesky
+    yarn callWriteMethod --network alephZeroTestnet
     ```
 
+## 実際にデプロイしたコントラクト
+
+[0xAa363921A48Eac63F802C57658CdEde768B3DAe1](https://evm-explorer-testnet.alephzero.org/address/0xAa363921A48Eac63F802C57658CdEde768B3DAe1)
